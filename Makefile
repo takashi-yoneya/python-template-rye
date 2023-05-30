@@ -5,7 +5,7 @@
 install:
 	rye pin 3.10
 	rye sync
-	pre-commit install
+	rye run pre-commit install
 
 # main.pyを実行する
 .PHONY: run_main
