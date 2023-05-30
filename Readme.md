@@ -2,14 +2,15 @@
 
 Projectで汎用的に活用可能なテンレートです。
 
+パッケージ管理ツールとして、Ryeを使用しています。
+
 # 前提ソフトウェア
 
 以下のソフトウェアを使用しますので、事前にインストールしてください。
 
-pyenv
-poetry
-python 3.10+ ※pyenvでインストールします
-pre-commit
+- rye
+- python 3.10+ ※ryeで自動的にインストールされます
+- pre-commit
 
 
 # How to use
