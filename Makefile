@@ -3,10 +3,8 @@
 # install
 .PHONY: install
 install:
-	pyenv install 3.10
-	pyenv local 3.10
-	poetry env use 3.10
-	poetry install
+	rye pin 3.10
+	rye sync
 	pre-commit install
 
 # main.pyを実行する
@@ -17,8 +15,8 @@ run_main:
 # pre-commitを明示的に実行する
 .PHONY: pre-commit
 pre-commit:
-	poetry run pre-commit run --all-files
+	rye run pre-commit run --all-files
 
 .PHONY: test
 test:
-	poetry run pytest tests
+	rye run pytest tests
